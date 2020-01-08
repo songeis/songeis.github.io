@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.6 链表的遍历 | Hello VuePress</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.63da287a.css" as="style"><link rel="preload" href="/assets/js/app.e2b87944.js" as="script"><link rel="preload" href="/assets/js/2.469c1d40.js" as="script"><link rel="preload" href="/assets/js/10.601d8784.js" as="script"><link rel="prefetch" href="/assets/js/11.5a617a59.js"><link rel="prefetch" href="/assets/js/12.c518f8bd.js"><link rel="prefetch" href="/assets/js/13.3c3c5271.js"><link rel="prefetch" href="/assets/js/14.1a697e77.js"><link rel="prefetch" href="/assets/js/15.0702b6bb.js"><link rel="prefetch" href="/assets/js/16.ecac3ef1.js"><link rel="prefetch" href="/assets/js/3.f374de1c.js"><link rel="prefetch" href="/assets/js/4.b58c1e7f.js"><link rel="prefetch" href="/assets/js/5.66f3e056.js"><link rel="prefetch" href="/assets/js/6.3ccc200c.js"><link rel="prefetch" href="/assets/js/7.e35598ad.js"><link rel="prefetch" href="/assets/js/8.4b0d8b16.js"><link rel="prefetch" href="/assets/js/9.d8278d09.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.63da287a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="Hello VuePress" class="logo"> <span class="site-name can-hide">Hello VuePress</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  External
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Home</a></li><li><a href="/hello.html" class="sidebar-link">说啥呢</a></li><li><a href="/2020/1/1_1.html" class="sidebar-link">Explicit link text</a></li><li><section class="sidebar-group depth-0"><a href="/2020/" class="sidebar-heading clickable router-link-active"><span>2020年日志</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/" class="sidebar-link">Home</a></li><li><section class="sidebar-group is-sub-group depth-1"><a href="/2020/1/" class="sidebar-heading clickable router-link-active"><span>1月</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/2020/1/1_1.html" class="sidebar-link">1月1日</a></li><li><a href="/2020/1/1_3.html" class="sidebar-link">1月3日</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_1-6-链表的遍历"><a href="#_1-6-链表的遍历" class="header-anchor">#</a> 1.6 链表的遍历</h1> <p>我们昨天说到了链表的结构，在 JavaScript 中的实现是一个多层的对象，然后我们又说过我们需要一个计数器知道到底有多少个元素。</p> <p>今天就开始尝试着实现吧。</p> <h1 id="count-的实现"><a href="#count-的实现" class="header-anchor">#</a> count 的实现</h1> <p>默认情况下</p> <p>count=0</p> <p>每次往里添加一个元素，count 就+1</p> <p>根据昨天的代码我们在 constructor 的里设置</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>我们可以将遍历代码写成如下的形式：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">getElementAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指针当在的位置</span>
+    <span class="token keyword">let</span> current
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 指针默认在第一个元素上</span>
+      current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+      <span class="token comment">// 指针往下走，指向就是 current 的 next 那当前就是那个 current</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>但回顾一下上次的代码，我们在添加节点的时候方式很蠢。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token function">addNode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>firstClassCarriages<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>secondClassCarriages
+    <span class="token keyword">this</span><span class="token punctuation">.</span>secondClassCarriages<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>thirdClassCarriages
+    <span class="token keyword">this</span><span class="token punctuation">.</span>thirdClassCarriages<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>fourthClassCarriages
+    <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>firstClassCarriages
+    <span class="token comment">// this.head = this.secondClassCarriages</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+  <span class="token punctuation">}</span>
+</code></pre></div><p>每次的结点挂载我们都是手动赋值。这一点我们要怎么改善一下呢。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Train</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token punctuation">{</span>
+      value<span class="token punctuation">:</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span>
+      next<span class="token punctuation">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// counter</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">addNode</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 挂载第一个元素：没有节点的时候count=0，这个时候 head 可以直接指向新添加的元素</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> element
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> current
+      current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+      <span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 指针开始移动</span>
+        current <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+      <span class="token punctuation">}</span>
+      current<span class="token punctuation">.</span>next <span class="token operator">=</span> element
+      <span class="token comment">// console.log(current)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getElementAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指针当在的位置</span>
+    <span class="token keyword">let</span> current
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 指针默认在第一个元素上</span>
+      current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+      <span class="token comment">// 指针往下走，指向就是 current 的 next 那当前就是那个 current</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>current<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> firstClassCarriages <span class="token operator">=</span> <span class="token punctuation">{</span>
+  value<span class="token punctuation">:</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span>
+  next<span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> secondClassCarriages <span class="token operator">=</span> <span class="token punctuation">{</span>
+  value<span class="token punctuation">:</span> <span class="token string">&quot;b&quot;</span><span class="token punctuation">,</span>
+  next<span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> thirdClassCarriages <span class="token operator">=</span> <span class="token punctuation">{</span>
+  value<span class="token punctuation">:</span> <span class="token string">&quot;c&quot;</span><span class="token punctuation">,</span>
+  next<span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> fourthClassCarriages <span class="token operator">=</span> <span class="token punctuation">{</span>
+  value<span class="token punctuation">:</span> <span class="token string">&quot;d&quot;</span><span class="token punctuation">,</span>
+  next<span class="token punctuation">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> hexie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Train</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(hexie)</span>
+hexie<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>firstClassCarriages<span class="token punctuation">)</span>
+<span class="token comment">// 挂第二个车厢</span>
+hexie<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>secondClassCarriages<span class="token punctuation">)</span>
+<span class="token comment">// 挂第三个车厢</span>
+hexie<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>thirdClassCarriages<span class="token punctuation">)</span>
+<span class="token comment">// 挂第四个车厢</span>
+hexie<span class="token punctuation">.</span><span class="token function">addNode</span><span class="token punctuation">(</span>fourthClassCarriages<span class="token punctuation">)</span>
+hexie<span class="token punctuation">.</span><span class="token function">getElementAt</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><p>经过修改，我们最终得到了上面的代码，但是这里思考一个问题，我们为什么会写出如下的代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">while</span> <span class="token punctuation">(</span>current<span class="token punctuation">.</span>next <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 指针开始移动</span>
+	current <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e2b87944.js" defer></script><script src="/assets/js/2.469c1d40.js" defer></script><script src="/assets/js/10.601d8784.js" defer></script>
+  </body>
+</html>
